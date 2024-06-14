@@ -76,7 +76,10 @@ WSGI_APPLICATION = 'bookproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db(),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': env('SQLITE_URL'),
+    }
 }
 
 
