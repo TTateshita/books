@@ -25,6 +25,8 @@ APP_NAME = os.environ.get("FLY_APP_NAME")
 
 ALLOWED_HOSTS = [f"{APP_NAME}.fly.dev", '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://books0613.fly.dev',]
+
 
 # Application definition
 
